@@ -40,7 +40,7 @@ def merge_listfiles():
 
     msg = f"Merged {len(all_entries)} unique entries.\n"
     if duplicates:
-        msg += f"⚠️ {sum(len(v) for v in duplicates.values())} duplicates ignored."
+        msg += f"{sum(len(v) for v in duplicates.values())} duplicates ignored."
     else:
         msg += "No duplicates found."
 
@@ -58,5 +58,6 @@ merge_button.pack(pady=20)
 
 quit_button = tk.Button(root, text="Quit", command=root.quit, font=("Arial", 10), width=25)
 quit_button.pack(pady=10)
+
 
 root.mainloop()
